@@ -11,12 +11,12 @@
    powershell -ExecutionPolicy Bypass -File .\install.ps1
    ```
    → `~/.claude/skills/alzip-compress/` 에 복사된다.
-   (수동: `alzip-tools\skills\alzip-compress` 폴더를 `%USERPROFILE%\.claude\skills\` 에 복사)
+   (수동: `skills\alzip-compress` 폴더를 `%USERPROFILE%\.claude\skills\` 에 복사)
 3. Claude Code **새 세션/재시작** 후 "압축해줘 / 풀어줘"로 사용하거나 `/alzip-compress`.
 
 ### B. 플러그인으로 설치 — CLI Claude Code 환경만
 ```
-/plugin marketplace add <owner>/<repo>
+/plugin marketplace add neoizen/alzip-tools
 /plugin install alzip-tools@alzip-marketplace
 ```
 > ⚠️ Cowork 환경엔 `/plugin` 명령이 없다 → **A 방법(파일 설치)** 을 쓸 것.
@@ -27,14 +27,15 @@
 - `.egg`/`.alz`가 꼭 필요한데 알집이 없으면 → **동의 후에만 설치 안내**(자동/강제 설치 안 함).
 - macOS/Linux에서는 해당 OS 도구로 처리(이 스킬 비적용).
 
-## 구조
+## 구조 (단일 플러그인 — repo 루트 = 플러그인)
 ```
-alzip-marketplace/
-├─ install.ps1                                  ← 파일 설치 스크립트(방법 A)
-├─ .claude-plugin/marketplace.json             ← (CLI 플러그인용 메타)
-└─ alzip-tools/
-   ├─ .claude-plugin/plugin.json               ← (CLI 플러그인용 메타)
-   └─ skills/alzip-compress/SKILL.md           ← 스킬 본문(검증된 알집 문법)
+alzip-tools/                       (repo 루트)
+├─ .claude-plugin/
+│  ├─ marketplace.json             ← 마켓 카탈로그(source: "./")
+│  └─ plugin.json                  ← 플러그인 매니페스트
+├─ skills/alzip-compress/SKILL.md  ← 스킬 본문(검증된 알집 문법)
+├─ install.ps1                     ← 파일 설치 스크립트(방법 A)
+└─ README.md
 ```
 
 ## 올리는 사람용

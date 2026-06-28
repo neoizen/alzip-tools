@@ -2,7 +2,7 @@
 # 사용:  powershell -ExecutionPolicy Bypass -File .\install.ps1
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$src  = Join-Path $root 'alzip-tools\skills\alzip-compress'
+$src  = Join-Path $root 'skills\alzip-compress'
 $destRoot = Join-Path $env:USERPROFILE '.claude\skills'
 
 if (-not (Test-Path -LiteralPath $src)) { Write-Error "스킬 소스를 찾을 수 없음: $src"; exit 1 }

@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "alzip-tools",
-      "source": "./alzip-tools",
+      "source": "./",
       "description": "알집(ALZipCon)으로 파일/폴더 압축·해제. 알집 미설치 시 Windows 내장 도구(Compress-Archive/tar)로 폴백. (Windows 전용)",
       "version": "1.0.0",
       "author": {
