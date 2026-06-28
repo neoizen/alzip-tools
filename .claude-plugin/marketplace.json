@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "name": "alzip-marketplace",
+  "owner": {
+    "name": "neoizen",
+    "url": "https://github.com/neoizen"
+  },
+  "plugins": [
+    {
+      "name": "alzip-tools",
+      "source": "./alzip-tools",
+      "description": "알집(ALZipCon)으로 파일 압축/해제하는 스킬(alzip-compress). Windows 전용, 알집 미설치 시 내장 도구로 폴백."
+    }
+  ]
+}

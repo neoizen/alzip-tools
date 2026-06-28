@@ -1,0 +1,5 @@
+{
+  "name": "alzip-tools",
+  "description": "알집(ALZipCon)으로 파일/폴더를 압축·해제한다. 알집이 없으면 Windows 내장 도구(Compress-Archive/Expand-Archive/tar)로 폴백하고, .egg/.alz가 꼭 필요하면 사용자 동의 후에만 설치를 안내한다. (Windows 전용)",
+  "version": "1.0.0"
+}
